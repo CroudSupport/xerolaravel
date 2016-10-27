@@ -94,5 +94,9 @@ class XeroServiceProvider extends ServiceProvider
         $this->app->bind('XeroTrackingCategory', function(){
            return new \XeroPHP\Models\Accounting\TrackingCategory();
         });
+
+        $this->app->bind('XeroTrackingCategoryOption', function(){
+           return new \XeroPHP\Models\Accounting\TrackingCategory\TrackingOption();
+        });
     }
 }
