@@ -58,6 +58,26 @@ class XeroServiceProvider extends ServiceProvider
             return new \XeroPHP\Models\Accounting\Contact();
         });
 
+        $this->app->bind('XeroContactPerson', function(){
+            return new \XeroPHP\Models\Accounting\ContactPerson();
+        });
+
+        $this->app->bind('XeroContactGroup', function(){
+            return new \XeroPHP\Models\Accounting\ContactGroup();
+        });
+
+        $this->app->bind('XeroAddress', function(){
+            return new \XeroPHP\Models\Accounting\Address();
+        });
+
+        $this->app->bind('XeroPhone', function(){
+            return new \XeroPHP\Models\Accounting\Phone();
+        });
+
+        $this->app->bind('XeroCurrency', function(){
+            return new \XeroPHP\Models\Accounting\Currency();
+        });
+
         $this->app->bind('XeroAccount', function(){
             return new \XeroPHP\Models\Accounting\Account();
         });
@@ -68,6 +88,14 @@ class XeroServiceProvider extends ServiceProvider
 
         $this->app->bind('XeroAttachment', function(){
             return new \XeroPHP\Models\Accounting\Attachment();
+        });
+
+        $this->app->bind('XeroTrackingCategory', function(){
+           return new \XeroPHP\Models\Accounting\TrackingCategory();
+        });
+
+        $this->app->bind('XeroTrackingCategoryOption', function(){
+           return new \XeroPHP\Models\Accounting\TrackingCategory\TrackingOption();
         });
     }
 }
